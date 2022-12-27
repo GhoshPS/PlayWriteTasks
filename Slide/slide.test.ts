@@ -13,7 +13,7 @@ test("Slider Demo", async ({ page }) => {
         let isCompleted = false;
         if (sliders) {
             while (!isCompleted) {
-                let srcBound = await s.boundingBox();
+                let srcBound = await sliders.boundingBox();
                 if (srcBound) {
                     await page.mouse.move(srcBound.x + srcBound.width / 2,
                         srcBound.y + srcBound.height / 2)
